@@ -1,0 +1,21 @@
+# https://hexadrive.jp/hexablog/others/tips-others/29679/
+# EditorConfig is awesome:http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# C++ source files
+[*.{cpp,h}]
+charset = utf-8-bom
+indent_style = tab
+indent_size = 4
+
+# UE4 project file
+[*.uproject]
+indent_style = space
+indent_size = 2
+
+# Windows newlines with a newline ending every file
+[*]
+end_of_line = crlf
+insert_final_newline = true
