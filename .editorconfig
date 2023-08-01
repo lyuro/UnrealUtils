@@ -1,21 +1,52 @@
 # https://hexadrive.jp/hexablog/others/tips-others/29679/
-# EditorConfig is awesome:http://EditorConfig.org
-
+# EditorConfig is awesome: https://EditorConfig.org
+ 
 # top-most EditorConfig file
 root = true
-
-# C++ source files
-[*.{cpp,h}]
+ 
+# Baseline
+[*]
 charset = utf-8-bom
 indent_style = tab
 indent_size = 4
-
-# UE4 project file
-[*.uproject]
+tab_width = 4
+trim_trailing_whitespace = false
+max_line_length = 120
+ 
+# MSBuild
+[*.{csproj,proj,projitems,shproj,fsproj,target,props}]
 indent_style = space
 indent_size = 2
-
+ 
+# XML config files
+[*.{config,nuspec,resx,natvis}]
+indent_style = space
+indent_size = 2
+ 
+# Python files
+[*.py]
+indent_style = space
+indent_size = 4
+ 
+# YAML files
+[*.yaml]
+indent_style = space
+indent_size = 2
+ 
+# Build.cs
+[*.Build.cs]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+tab_width = 4
+trim_trailing_whitespace = true
+ 
 # Windows newlines with a newline ending every file
 [*]
 end_of_line = crlf
 insert_final_newline = true
+ 
+# UE4 project file
+[*.uproject]
+indent_style = space
+indent_size = 2
