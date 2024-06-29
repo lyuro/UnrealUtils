@@ -1,5 +1,7 @@
+#include Ecryption.h
+
 #define SPLIT_SYMBOL "52168@E4B9!13Fe-33!B0D9CF6!$@!~"
-FString Utils::Common::Encrypt(const FString& InputString, const FAES::FAESKey& Key)
+FString UnrealUtils::Common::Encrypt(const FString& InputString, const FAES::FAESKey& Key)
 {
 	if (!ensure(!InputString.IsEmpty())) { return{}; }
 	if (!ensure(Key.IsValid())) { return{}; }
@@ -26,7 +28,7 @@ FString Utils::Common::Encrypt(const FString& InputString, const FAES::FAESKey& 
 	return Result;
 }
 
-FString Utils::Common::Decrypt(const FString& InputString, const FAES::FAESKey& Key)
+FString UnrealUtils::Common::Decrypt(const FString& InputString, const FAES::FAESKey& Key)
 {
 	if (!ensure(!InputString.IsEmpty())) { return{}; }
 	if (!ensure(Key.IsValid())) { return{}; }
@@ -57,7 +59,7 @@ FString Utils::Common::Decrypt(const FString& InputString, const FAES::FAESKey& 
 	return LeftData;
 }
 
-FString Utils::Common::EncryptBase64(const FString& InputString, const FAES::FAESKey& Key)
+FString UnrealUtils::Common::EncryptBase64(const FString& InputString, const FAES::FAESKey& Key)
 {
 	if (!ensure(!InputString.IsEmpty())) { return{}; }
 	if (!ensure(Key.IsValid())) { return{}; }
@@ -84,7 +86,7 @@ FString Utils::Common::EncryptBase64(const FString& InputString, const FAES::FAE
 	return Result;
 }
 
-FString Utils::Common::DecryptBase64(const FString& InputString, const FAES::FAESKey& Key)
+FString UnrealUtils::Common::DecryptBase64(const FString& InputString, const FAES::FAESKey& Key)
 {
 	if (!ensure(!InputString.IsEmpty())) { return{}; }
 	if (!ensure(Key.IsValid())) { return{}; }
